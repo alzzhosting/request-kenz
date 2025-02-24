@@ -40,7 +40,7 @@
     <script>
         async function fetchData() {
             try {
-                let res = await fetch('https://YOUR_VERCEL_API_URL_HERE');
+                let res = await fetch('https://request-kenz.vercel.app');
                 let data = await res.json();
                 document.getElementById('output').textContent = JSON.stringify(data, null, 2);
             } catch (error) {
@@ -53,7 +53,7 @@
             let email = document.getElementById('email').value;
             let fitur = document.getElementById('fitur').value;
 
-            let res = await fetch('https://YOUR_VERCEL_API_URL_HERE', {
+            let res = await fetch('https://request-kenz.vercel.app', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ nama, email, fitur })
